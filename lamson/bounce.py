@@ -189,7 +189,7 @@ class BounceAnalyzer(object):
             status = self.headers['Status'][0]
             self.primary_status = int(status[0]), PRIMARY_STATUS_CODES[status[0]]
             self.secondary_status = int(status[1]), SECONDARY_STATUS_CODES[status[1]]
-            combined = "".join(status[1:])
+            combined = "".join(status[1:2])
             self.combined_status = int(combined), COMBINED_STATUS_CODES[combined]
         else:
             self.primary_status = (None, None)
